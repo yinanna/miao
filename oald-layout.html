@@ -5,39 +5,42 @@
   <meta name="viewport" content="width=device-width">
   <title>JS Bin</title>
   <style>
-    .a{
-  width:235px;
-  height:654px;background-color:pink;
-  border:1px solid;
+  *{
+  box-sizing:border-box;
+}
+html{
+  height:100%;
+}
+body{
+  margin:0;
+  height:100%;
+  font-size:0;
+}
+body>*{
   display:inline-block;
 }
-.c{
-  width:235px;
-  height:654px;background-color:pink;
-  border:1px solid;
-  display:inline-block;
+#a,#c,#d{
+  width:20%;
+  height:100%;
+  background:green;
+}
+#b{
+  width:40%;
+  height:100%;
+  background-color:blue;
   
-  
 }
-.b{
-  width:616px;
-    height:654px;
-  display:inline-block;
-  background-color:yellow;
-  border-top:1px solid;
-}
-.d{width:235px;
-  border:1px solid;
-  display:inline-block;
-  height:654px;background-color:pink;
+#a,#b,#c{
+  border-right:1px solid;
 }
   </style>
 </head>
 <body>
-  <div class="a"></div><div class="b">
   <div id="a"></div>
   <div id="b"></div>
+  <div id="c"></div>
+  <div id="d"></div>
     
-  </div><div class="c"></div><div class="d"></div>
+ 
 </body>
 </html>
