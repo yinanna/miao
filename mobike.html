@@ -3,8 +3,7 @@
   <meta charset="utf-8">
   <title>JS Bin</title>
   <style>
-    <style>
- body {
+    body {
   margin:0 important!;
  
 }
@@ -24,7 +23,7 @@ ul{
   margin-left:-1px;
   margin-right:-1px;
 }
-ul li{
+.pr li{
   box-sizing:border-box;
   height:100px;
   background-color:pink;
@@ -37,22 +36,38 @@ ul li{
 .b{
   overflow:hidden;
 }
+.link li{
+  box-sizing:border-box;
+  width:33.333333%;
+  height:50px;
+  background-color:yellow;
+  float:left;
+  border:1px solid black;
+}
+.link li:nth-child(2){
+  text-align:center;
+}
+.link li:nth-child(3){
+  text-align:right;
+}
+
 @media(max-width:1080px){
 .a{
   height:230px;
   }
-  ul li{
+  .pr li{
    width:50%;
   }  
 }
 
 @media(max-width:700px){
-  ul li{
+  .pr li{
     width:100%;
   }
+  .link li{
+    width:auto;
+  }
 }
-  
-  </style>
   </style>
 </head>
 <body>
@@ -60,13 +75,21 @@ ul li{
     <div class="a"></div>
   
     <div class="b">
-      <ul>
+      <ul class="pr">
         <li></li> 
         <li></li>
         <li></li>
         <li></li>
       </ul>
     </div>
+    
+    <ul class="link">
+      <li>aaaaaaaaaaaa</li>
+      <li>bbbbbbbbbbbb</li>
+      <li>cccccccccccc</li>
+
+    </ul>
+    
     
   </div>
 </body>
