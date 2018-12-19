@@ -136,7 +136,7 @@ console.log(x);
 
   <script id="ch0103/09" type="text/javascript">
     var r=+prompt("输入","3.0");
-    var h=3.1415926;
+    var h=3.14159;
     var a=(2*r).toFixed(4);
     var C=(2*h*r).toFixed(4);
     var S=(h*r*r).toFixed(4);
@@ -170,7 +170,7 @@ console.log(x);
     var a=prompt("输入","100");
     var d=console.log(a.split('').reverse().join(''));
     console.log(d);
-    /输出的是字符串，错了？？/
+    
   </script>
 
   <script id="ch0103/14" type="text/javascript">
@@ -192,6 +192,7 @@ console.log(x);
     var m=+prompt("输入","2");
     var n=+prompt("输入","2");
     var h=Math.sqrt((x-m)*(x-m)+(y-n)*(y-n));
+    console.log(h.toFixed(3));
   </script>
 
   <script id="ch0103/17" type="text/javascript">
@@ -306,6 +307,7 @@ var b=Math.pow(2,n);console.log(b);
 
 
    <script id="ch0104/09" type="text/javascript">
+    var n = +prompt("","105");
     if(n%3==0&&n%5==0&&n%7==0) console.log("3 5 7");
     else if(n%3==0&&n%5==0&&n%7!=0) console.log("3 5");
     else if(n%3==0&&n%5!=0&&n%7==0) console.log("3 7");
@@ -332,11 +334,11 @@ else console.log("0");
 
 
    <script id="ch0104/12" type="text/javascript">
-    var n=+prompt("输入","120");
+   var n=+prompt("输入","120");
     var x=n/1.2;
     var y=n/3+27+23;
-    if(x>y) console.log("Walk");
-    else if(y>x) console.log("Bike");
+    if(x>y) console.log("Bike");
+    else if(y>x) console.log("Walk");
     else console.log("All");
   </script>
 
@@ -383,8 +385,17 @@ else if(m>1000&&(m-1000)/500!=0&&n!="y") console.log(8+Math.ceil((m-1000)/500)*4
     else console.log("no")
   </script>
 
-<script type="text/javascript">
-  
+<script  id="19" type="text/javascript">
+   var s = +prompt('请输入一个整数')
+    var t = +prompt('请输入一个整数')
+    var r = prompt('请输入一个字符')
+    if (r == "+") result = s + t
+    else if (r == "-") result = s - t
+    else if (r == "*") result = s * t
+    else if (r == "/" && t != 0) result = s / t
+    else if (r == "/" && t == 0) result = "Divided by Zero"
+    else result = "Invalid operator"
+    console.log(result)
 </script>
 
 <script id="ch0104/20" type="text/javascript">
