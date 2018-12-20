@@ -342,6 +342,15 @@ else console.log("0");
     else console.log("All");
   </script>
 
+<script id="ch0104/13" type="text/javascript">
+  var N=+prompt("输入","");
+if(0 <= N < 5) 
+  console.log((-N+2.5).toFixed(3));
+else if(5 <= N < 10) 
+  console.log((2-1.5(N-3)(N-3)).toFixed(3));
+else if(10 <= N < 20) 
+  console.log((N/2-1.5).toFixed(3));
+</script>
 
    <script id="ch0104/14" type="text/javascript">
     var m=+prompt("输入","1200");
@@ -359,7 +368,7 @@ else if(m>1000&&(m-1000)/500!=0&&n!="y") console.log(8+Math.ceil((m-1000)/500)*4
     var m=+prompt("输入","");
     var n=+prompt("输入","");
     var h=+prompt("输入","");
-    var a=0;if(m>=n) var a=m;
+    var a;if(m>=n) var a=m;
     else var a=n;
     if(n>=h) console.log(n);
     else console.log(h);
@@ -386,15 +395,14 @@ else if(m>1000&&(m-1000)/500!=0&&n!="y") console.log(8+Math.ceil((m-1000)/500)*4
   </script>
 
 <script  id="ch0104/19" type="text/javascript">
-   var s = +prompt('请输入一个整数')
-    var t = +prompt('请输入一个整数')
-    var r = prompt('请输入一个字符')
-    if (r == "+") result = s + t
-    else if (r == "-") result = s - t
-    else if (r == "*") result = s * t
-    else if (r == "/" && t != 0) result = s / t
-    else if (r == "/" && t == 0) result = "Divided by Zero"
-    else result = "Invalid operator"
+   var s = +prompt('请输入一个整数');
+    var t = +prompt('请输入一个整数');
+    var r = prompt('请输入一个字符');
+    if (r == "+") result = s + t;
+    else if (r == "-") result = s - t;
+    else if (r == "*") result = s * t;
+    else if (r == "/"){if(t!=0) result = s/t;else result = "Divided by Zero"}
+    else result = "Invalid operator";
     console.log(result)
 </script>
 
@@ -408,11 +416,13 @@ else if(m>1000&&(m-1000)/500!=0&&n!="y") console.log(8+Math.ceil((m-1000)/500)*4
     console.log("x1=x2="+x1);
   else if(b*b>4*a*c){
     console.log("x1=" + x1 + ";" + "x2=" + x2);
-  };
+  }
+
   else if(b*b<4*a*c){
-    var x1=(-b/(2*a)).toFixed(5)+"+"+(Math.sqrt(4*a*c-b*b))/(2*a).toFixed(5)+"i";
-    var x2=(-b/(2*a)).toFixed(5)+""+(Math.sqrt(4*a*c-b*b))/(2*a).toFixed(5)+"i";
-    console.log("x1=" + x1 + ";" + "x2=" + x2);}
+    var m=(-b/(2*a)).toFixed(5)+"+"+(Math.sqrt(4*a*c-b*b)/(2*a)).toFixed(5)+"i";
+    var n=(-b/(2*a)).toFixed(5)+"-"+(Math.sqrt(4*a*c-b*b)/(2*a)).toFixed(5)+"i";
+    console.log("x1=" + m + ";" + "x2=" + n+";")
+    }
 
 </script>
 
