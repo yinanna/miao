@@ -421,7 +421,7 @@ else if(m>1000&&(m-1000)/500!=0&&n!="y") console.log(8+Math.ceil((m-1000)/500)*4
   else if(b*b<4*a*c){
     var m=(-b/(2*a)).toFixed(5)+"+"+(Math.sqrt(4*a*c-b*b)/(2*a)).toFixed(5)+"i";
     var n=(-b/(2*a)).toFixed(5)+"-"+(Math.sqrt(4*a*c-b*b)/(2*a)).toFixed(5)+"i";
-    console.log("x1=" + m + ";" + "x2=" + n)
+    console.log("x1=" + m + ";" + "x2=" + n);
     }
 
 </script>
@@ -432,4 +432,317 @@ else if(m>1000&&(m-1000)/500!=0&&n!="y") console.log(8+Math.ceil((m-1000)/500)*4
     var y=+prompt("输入","9");
     var l=n-Math.ceil(y/x);console.log(l);
   </script>
+
+  <script id="ch0105/1" type="text/javascript">
+    var n=+prompt("输入","");
+    var total=0;
+    for(var i=1;i<=n;i=i+1){
+      var y=+prompt();var total=total+y;
+    } console.log((total/n).toFixed(2));
+  </script>
+
+  <script id="ch0105/2" type="text/javascript">
+    var total=0;
+    for(var i=1;i<=12;i=i+1){
+    var m=+prompt("shuru","");
+    var total=total+m;
+  } var average=(total/12).toFixed(2);
+    console.log("$"+average);
+  </script>
+
+  <script id="ch0105/3" type="text/javascript">
+    var n=+prompt("输入","");
+    var total=0;
+    for(var i=1;i<=n;i=i+1){
+      var y=+prompt();var total=total+y;
+    } console.log((total/n).toFixed(4));
+  </script>
+
+  <script id="ch0105/4" type="text/javascript">
+    var n=+prompt("输入","");
+    var total=0;
+    for(var i=2;i<=n+1;i=i+1){
+      var y=+prompt();var total=total+y;
+    } var average=(total/n).toFixed(5);
+    console.log(total+" "+average);
+  </script>
+
+  <script id="ch0105/5" type="text/javascript">
+    var n=+prompt("输入","");
+    var max=0;
+    for(var i=1;i<=n;i=i+1){
+      var s=+prompt();
+      if(s>=max) 
+        var max=s;
+    } console.log(max);
+  </script>
+
+  <script id="ch0105/6" type="text/javascript">
+    var n=+prompt("输入","");
+    var max=0;var min=0;
+    for(var i=1;i<=n;i=i+1){
+      var s=+prompt();
+      if(s>=max) 
+        var max=s;
+      if(s<=min) 
+        var min=s;
+    } console.log(max);
+  </script>
+
+  <script id="ch0105/7" type="text/javascript">
+    var n=+prompt("输入","");
+    var x=0;
+    var y=0;
+    var z=0;
+    for(var i=1;i<=n;i=i+1){
+      var s1=+prompt("");
+       var s2=+prompt("");
+        var s3=+prompt("");
+      var x=x+s1;
+      var y=y+s2;
+      var z=z+s3;
+    } var total=x+y+z;
+    console.log(x+" "+y+" "+z+" "+total);
+  </script>
+
+  <script id="ch0105/8" type="text/javascript"></script>
+
+  <script id="ch0105/9" type="text/javascript">
+    var m=+prompt("输入","");
+    var n=+prompt("输入","");
+    var h;var total=0;
+  if(m%2==0){
+    for (h=0;(m+2*h+1)<=n;h=h+1){
+      var total=total+m+2*h+1; 
+    }
+  } else if(m%2!=0){
+    for (h=0;(m+2*h)<=n;h=h+1){
+      var total=total+m+2*h; 
+    }
+  } console.log(total);
+  </script>
+
+  <script id="ch0105/10" type="text/javascript">
+    var m=+prompt("输入","");
+    var n=+prompt("输入","");
+    var h=0;var total=0;
+  if(m%17==0){
+    for (h=0;(m+17*h)<=n;h=h+1){
+      var total=total+m+17*h; 
+    }
+  } else if(m%17!=0&&m>17){do{var h=h+1;var s=17*h;}while(s<m);
+    while(17*h<=n){
+      var total=total+17*h;h=h+1; 
+    }
+  } else if(m%17!=0&&m<17){ for (h=0;17*h<=n;h=h+1){
+      var total=total+17*h; 
+    }}console.log(total);
+
+  </script>
+
+  <script id="ch0105/11" type="text/javascript">
+   var m=+prompt("输入","");var h=0;var w=0;var y=0;for(n=0;n<5;n=n+1)
+{var x=+prompt();if(x==1) var h=h+1;else if(x==5) var w=w+1;else if(x==10) var y=y+1;} console.log(h);console.log(w);console.log(y);
+
+  </script>
+
+  <script id="ch0105/12" type="text/javascript">
+    var N=+prompt("输入","");m=+prompt("输入","");var h=0;var w=0;var y=0;for(n=0;n<N;n=n+1)
+{var x=+prompt();if(x==m) var h=h+1} console.log(h);
+  </script>
+
+  <script id="ch0105/13" type="text/javascript">
+    var a=+prompt("输入","");n=+prompt("输入","");var w=1;for(h=1;h<=n;h=h+1)
+{var w=w*a;} console.log(w);
+  </script>
+
+  <script id="ch0105/14" type="text/javascript">
+    var a=+prompt("输入","");n=+prompt("输入","");var w=a;for(h=1;h<=n;h=h+1)
+{var w=w+0.001*w;} var total=w.toFixed(4);console.log(total);
+  </script>
+
+  <script id="ch0105/15" type="text/javascript">
+    var R=+prompt("输入","");var M=+prompt("输入","");Y=+prompt("输入","");var w=M;for(h=1;h<=Y;h=h+1)
+{var w=w+R/100*w;} var total=Math.floor(w);console.log(total);
+  </script>
+
+  <script id="ch0105/16" type="text/javascript">
+    var N=+prompt("输入","");var K=+prompt("输入","");var w=200;for(h=2;;h=h+1)
+{var w=w+K/100*w;var s=N*h;if(s>=w) break;} if(h<=20) console.log(h);else console.log("Impossible");
+  </script>
+
+  <script id="ch0105/17" type="text/javascript">
+    var k=+prompt();var w=0;var y=1;for(n=2;n<=k;n=n+1){var t=w+y;var w=y;var y=t; }console.log(t);
+  </script>
+
+  <script id="ch0105/18" type="text/javascript">
+    var n=+prompt();var x=+prompt();var y=+prompt();var l=y/x;for(m=0;m<n-1;m=m+1){var a=+prompt();var b=+prompt();var h=b/a;if(h-l>0.05) console.log("better");else if(l-h>0.05) console.log("worse");else console.log("same")}
+  </script>
+
+  <script id="ch0105/19" type="text/javascript">
+    var n=+prompt();var t=0;for(h=0;h<n;h=h+1){var x=+prompt();var y=+prompt();var p=+prompt();var w=Math.sqrt(Math.abs(x)*Math.abs(x)+Math.abs(y)*Math.abs(x))/50*2+1.5*p;var t=t+w;}console.log(Math.ceil(t));
+  </script>
+  <script id="ch0105/20" type="text/javascript">
+    var h=+prompt();var l=1;var w=h;var t=h;for(n=1;n<=10;n=n+1){var l=l*0.5;} for(n=1;n<10;n=n+1){var t=t*0.5;var w=w+t*2} var s=h*l;console.log(w.toFixed(4));
+console.log(s.toFixed(7));
+  </script>
+  <script id="ch0105/21" type="text/javascript">
+    var N=+prompt();do{if(N%2!=0) {var f=N;var N=N*3+1;console.log(f+"*3+1="+N)}else if(N%2==0) {var f=N;var N=N/2;console.log(f+"/2="+N)}} while(N!=1);console.log("End");
+  </script>
+<script id="ch0105/22" type="text/javascript">
+    
+  </script>
+
+<script id="ch0105/23" type="text/javascript">
+    var t=+prompt();var m=0; var p=+prompt();for(n=1;n<=p;n=n+1){var l=+prompt();var h=n;var m=m+l;if(m>=t) break;} var left=p-h;console.log(left);/*提示：总量-前几个人的累加<=0*/
+  </script>
+
+<script id="ch0105/24" type="text/javascript">
+   错了 var n=+prompt();var x=+prompt();var y=+prompt();if(90<=x<=140&&60<=y<=90) var count=count+1;else count=0;
+  </script>
+<script id="ch0105/25" type="text/javascript">
+    
+  </script>
+<script id="ch0105/26" type="text/javascript">
+    var n=+prompt();var count=0;for(m=0;m<n;m=m+1){var x=+prompt();var a=x%10;var b=(x%100-x%10)/10;var c=(x%1000-x%100)/100;var d=Math.floor(x/1000);var ss=a-d-c-b;if(ss>0) var count=count+1;} console.log(count)
+  </script>
+
+<script id="ch0105/27" type="text/javascript">
+    var K=+prompt();var Sn=0;for(n=1;;n++){Sn=Sn+1/n;var h=n;if(Sn>K) break;} console.log(h);
+  </script>
+
+<script id="ch0105/28" type="text/javascript">
+   var n=+prompt();
+ var q="";
+ for(m=1;;m=m+1){
+var h=(n%Math.pow(10,m)-n%Math.pow(10,m-1))/Math.pow(10,m-1);
+if(h>=1){
+  var p=h;
+  var q=q+h+" ";}
+  else break;} 
+  console.log(q)
+  </script>
+
+<script id="ch0105/29" type="text/javascript">
+    
+  </script>
+<script id="ch0105/30" type="text/javascript">
+    var m=+prompt();
+    var k=+prompt();
+ var p=0;
+ for(n=1;;n=n+1){
+var h=(m%Math.pow(10,n)-m%Math.pow(10,n-1))/Math.pow(10,n-1);
+if(h>=1){ 
+  if(h==3)
+  var p=p+1;
+  }
+  else break;} 
+ if(m%19==0&&p==k) 
+  console.log("YES");
+else console.log("NO");
+  </script>
+
+<script id="ch0105/31" type="text/javascript">
+    
+  </script>
+<script id="ch0105/32" type="text/javascript">
+    var n=+prompt();
+    var q=2;
+    var p=1;
+    var m=0;
+    if(n==1)
+      console.log((2/1).toFixed(4));
+    else{
+      for(h=0;h<n-1;h++){
+        var s=q;q=q+p;p=s;
+        var m=m+q/p;
+      } console.log((m+2/1).toFixed(4));
+    }
+  </script>
+
+<script id="ch0105/33" type="text/javascript">
+    var n=+prompt();var s=1;if(n==1){console.log(s.toFixed(4))} else {for(m=2;m<=n;m=m+1){if(m%2==0) var s=s-1/m;else if(n%2!=0) var s=s+1/m;} console.log(s.toFixed(4))}
+  </script>
+
+<script id="ch0105/34" type="text/javascript">
+    var n=+prompt();var s=1;var t=0;for(m=1;m<=n;m=m+1){var s=s*m;var t=t+s;} console.log(t);
+  </script>
+
+<script id="ch0105/35" type="text/javascript">
+    var n=+prompt();var s=1;var t=0;for(m=1;m<=n;m=m+1){var s=s*m;var h=1/s;var t=t+h;} console.log((t+1).toFixed(10))
+  </script>
+<script id="ch0105/36" type="text/javascript">
+    var x=+prompt();var n=+prompt();var t=0;for(m=0;m<=n;m=m+1){var s=Math.pow(x,m);var t=t+s;} console.log(t.toFixed(2));
+  </script>
+<script id="ch0105/37" type="text/javascript">
+    
+  </script>
+<script id="ch0105/28" type="text/javascript">
+    
+  </script>
+
+<script id="ch0105/39" type="text/javascript">
    
+  var n=+prompt();
+  var t=0;
+  for(m=1;m<=n;m=m+1){
+    if(m%7==0)
+     continue;
+ if (m<10){
+    var h=(m%Math.pow(10,1)-m%Math.pow(10,0))/Math.pow(10,0);
+    if(h!=7){
+      var s=Math.pow(m,2)
+    } else s=0;
+  } else if(m>=10){
+    var p=(m%Math.pow(10,1)-m%Math.pow(10,0))/Math.pow(10,0);
+    var l=(m%Math.pow(10,2)-m%Math.pow(10,1))/Math.pow(10,1);
+     if(p!=7&&l!=7){
+      var s=Math.pow(m,2)
+    } else s=0;/*如果不让此处s=0,则即使m=17时，s也会以上一个数的平方累加到t中*/
+  } 
+  var t=t+s;
+
+  }
+  console.log(t);
+  </script>
+
+<script id="ch0105/40" type="text/javascript">
+    var ll=+prompt();var count=0;for(n=1;n<=ll;n=n+1){
+ for(m=1;;m=m+1){
+var h=(n%Math.pow(10,m)-n%Math.pow(10,m-1))/Math.pow(10,m-1);
+if(h>=1){
+  if(h==1) var count=count+1;
+}
+  else break;} 
+  } var last=count+Math.floor(ll/10);console.log(last);
+  </script>
+
+<script id="ch0105/41" type="text/javascript">
+    var ss=+prompt();var ll=+prompt();var count=0;for(n=ss;n<=ll;n=n+1){
+ for(m=1;;m=m+1){
+var h=(n%Math.pow(10,m)-n%Math.pow(10,m-1))/Math.pow(10,m-1);
+if(h>=1)/*错误，如果是20或者低位中有0的话，就会跳过，补救方法：在循环外将跳过的数补救回来
+思路：有低位向高位取模，必须知道一个整数比如123的最高位的高位前面一位的判断条件，但是控制台显示这一位是0不是好判断的NAN或者其他
+
+换另一个思路，先用判断if else加循环判断出这个数有几位，再依次从低位向取模
+  */{
+  if(h==2) var count=count+1;
+}
+  else break;} 
+  } if(ll>=20) var count=count+1;console.log(count);
+  </script>
+<script id="ch0105/" type="text/javascript">
+    
+  </script>
+<script id="ch0105/" type="text/javascript">
+    
+  </script>
+<script id="ch0105/" type="text/javascript">
+    
+  </script>
+<script id="ch0105/" type="text/javascript">
+    
+  </script>
+<script id="ch0105/" type="text/javascript">
+    
+  </script>
