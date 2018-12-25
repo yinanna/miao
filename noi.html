@@ -505,7 +505,15 @@ else if(m>1000&&(m-1000)/500!=0&&n!="y") console.log(8+Math.ceil((m-1000)/500)*4
     console.log(x+" "+y+" "+z+" "+total);
   </script>
 
-  <script id="ch0105/08" type="text/javascript"></script>
+  <script id="ch0105/08" type="text/javascript">
+    var a=+prompt();
+    var s=(a-2)*180;
+    for(n=1;n<a;n=n+1){
+      var degree=+prompt();
+      var s=s-degree
+    } console.log(s);
+
+  </script>
 
   <script id="ch0105/09" type="text/javascript">
     var m=+prompt("输入","");
@@ -567,12 +575,28 @@ else if(m>1000&&(m-1000)/500!=0&&n!="y") console.log(8+Math.ceil((m-1000)/500)*4
   </script>
 
   <script id="ch0105/16" type="text/javascript">
-    var N=+prompt("输入","");var K=+prompt("输入","");var w=200;for(h=2;;h=h+1)
-{var w=w+K/100*w;var s=N*h;if(s>=w) break;} if(h<=20) console.log(h);else console.log("Impossible");
+    var N=+prompt("输入","");
+    var K=+prompt("输入","");
+    var w=200;
+    for(h=2;;h=h+1){
+      var w=w+K/100*w;
+      var s=N*h;
+      if(s>=w) break;
+    } if(h<=20) 
+    console.log(h);
+    else 
+      console.log("Impossible");
   </script>
 
   <script id="ch0105/17" type="text/javascript">
-    var k=+prompt();var w=0;var y=1;for(n=2;n<=k;n=n+1){var t=w+y;var w=y;var y=t; }console.log(t);
+    var k=+prompt();
+    var w=0;
+    var y=1;
+    for(n=2;n<=k;n=n+1){
+      var t=w+y;
+      var w=y;
+      var y=t;
+    } console.log(t);
   </script>
 
   <script id="ch0105/18" type="text/javascript">
@@ -590,7 +614,7 @@ console.log(s.toFixed(7));
     var N=+prompt();do{if(N%2!=0) {var f=N;var N=N*3+1;console.log(f+"*3+1="+N)}else if(N%2==0) {var f=N;var N=N/2;console.log(f+"/2="+N)}} while(N!=1);console.log("End");
   </script>
 <script id="ch0105/22" type="text/javascript">
-    
+    var h=0;var t=0;for(n=1;n<=12;n=n+1){var m=+prompt();t=300-m+t;if(t<0){console.log("-"+n);break;} if(t>=300){t=t-300;var h=h+300}else if(t>=200){t=t-200;var h=h+200;}else if(t>=100){t=t-100;var h=h+100} if(n==12) console.log(t+h*1.2);var s=t;}
   </script>
 
 <script id="ch0105/23" type="text/javascript">
@@ -598,10 +622,15 @@ console.log(s.toFixed(7));
   </script>
 
 <script id="ch0105/24" type="text/javascript">
-   错了 var n=+prompt();var x=+prompt();var y=+prompt();if(90<=x<=140&&60<=y<=90) var count=count+1;else count=0;
+  var s=0;var count=0;var hh=+prompt();for(m=1;m<=hh;m=m+1){var a=+prompt();var b=+prompt();if(90<=a&&a<=140&&60<=b&&b<=90) var count=count+1;else count=0;if(count>s) var s=count;} console.log(s)
   </script>
 <script id="ch0105/25" type="text/javascript">
-    
+    for(n=81;n<=728;n=n+1){d71=(n%Math.pow(7,1)-n%Math.pow(7,0))/Math.pow(7,0);
+d72=(n%Math.pow(7,2)-n%Math.pow(7,1))/Math.pow(7,1);
+d73=(n%Math.pow(7,3)-n%Math.pow(7,2))/Math.pow(7,2);
+d91=(n%Math.pow(9,1)-n%Math.pow(9,0))/Math.pow(9,0);
+d92=(n%Math.pow(9,2)-n%Math.pow(9,1))/Math.pow(9,1);
+d93=(n%Math.pow(9,3)-n%Math.pow(9,2))/Math.pow(9,2);if(d71==d93&&d72==d92&&d73==d91)break;}console.log(n);
   </script>
 <script id="ch0105/26" type="text/javascript">
     var n=+prompt();var count=0;for(m=0;m<n;m=m+1){var x=+prompt();var a=x%10;var b=(x%100-x%10)/10;var c=(x%1000-x%100)/100;var d=Math.floor(x/1000);var ss=a-d-c-b;if(ss>0) var count=count+1;} console.log(count)
@@ -643,7 +672,24 @@ else console.log("NO");
   </script>
 
 <script id="ch0105/31" type="text/javascript">
-    
+    var l = +prompt()//灯的数量
+var p = +prompt()//人的数量
+var turn
+var ss='';
+for(var lightNum = 1; lightNum <= l; lightNum++) {
+  turn = 0//当前灯被处理的次数
+
+  for(var pNum = 1; pNum <= lightNum/*此人有可能处理这个灯*/ && pNum <= p/*人的编号小于所有人的数量*/; pNum++) {
+    if (lightNum % pNum == 0) {//此人将会处理这个灯
+      turn++
+    }
+  }
+
+  if (turn % 2 === 1) {
+    var ss=ss+lightNum+',';
+
+  }
+} console.log(ss)
   </script>
 <script id="ch0105/32" type="text/javascript">
     var n=+prompt();
@@ -675,10 +721,26 @@ else console.log("NO");
     var x=+prompt();var n=+prompt();var t=0;for(m=0;m<=n;m=m+1){var s=Math.pow(x,m);var t=t+s;} console.log(t.toFixed(2));
   </script>
 <script id="ch0105/37" type="text/javascript">
-    
+    var M=+prompt(); var N=+prompt();var X=+prompt();var turn=X*N/M;if(M>N) console.log(N+turn);
   </script>
-<script id="ch0105/28" type="text/javascript">
-    
+<script id="ch0105/38" type="text/javascript">
+ /*var n = parseInt(prompt());
+  var c = [];
+  for (var i = n; i >= 0; i--) {
+    c.push(i * parseInt(prompt()));
+  }
+  // 是否全为0
+  for (var i = 0; i < n; i++) {
+    if (c[i] != 0) {
+      // 舍弃原函数的常数项的导数
+      console.log(c.slice(0, -1).join(' '));
+      break;
+    } 
+  }
+  if (i == n) {
+    console.log(0);
+  }
+ */   
   </script>
 
 <script id="ch0105/39" type="text/javascript">
@@ -731,17 +793,28 @@ if(h>=1)/*错误，如果是20或者低位中有0的话，就会跳过，补救�
   else break;} 
   } if(ll>=20) var count=count+1;console.log(count);
   </script>
-<script id="ch0105/" type="text/javascript">
-    
+<script id="ch0105/42" type="text/javascript">
+    var M=+prompt();var N=+prompt();for(m=1;m<=M;m=m+1){
+if(m==1||m==M){var s='';for(n=1;n<=7;n=n+1){var s=s+'@';}console.log(s)}
+else{var s='';for(n=1;n<=N;n=n+1){if(n==1||n==N) var h='@';else var h=' ';var s=s+h;}console.log(s)}
+}
   </script>
-<script id="ch0105/" type="text/javascript">
-    
+<script id="ch0105/43" type="text/javascript">
+    /*两个不同的质数的乘积是合数。它有4个因数。分别为两个质数，1和它本身*/
+var a=+prompt();for(m=2;m<a;m=m+1){if(a%m==0){var s=m;break;}}var h=a/s;if(s>h)  console.log(s);else console.log(h);
   </script>
-<script id="ch0105/" type="text/javascript">
-    
+<script id="ch0105/44" type="text/javascript">
+    var n=+prompt();var t=0;if(n==1) console.log(2);else{for(m=3;m<=50;m=m+1){var count=0;
+for(h=2;h<m;h=h+1){
+if(m%h!=0) 
+var count=count+1;
+
+}
+if(count==m-2) var t=t+1; if(t==n-1) break;}
+console.log(m);}
   </script>
-<script id="ch0105/" type="text/javascript">
-    
+<script id="ch0105/45" type="text/javascript">
+    var n=+prompt();var t=0;var t1=0;var s=0;for(m=1;;m=m+1){var t1=t;t=t+m;if(t>=n) break;} for(h=1;h<=m-1;h=h+1){s=s+Math.pow(h,2)} var hh=s+(n-t1)*m; console.log(hh);
   </script>
 <script id="ch0105/" type="text/javascript">
     
