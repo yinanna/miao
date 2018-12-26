@@ -618,7 +618,7 @@ console.log(s.toFixed(7));
   </script>
 
 <script id="ch0105/23" type="text/javascript">
-    var t=+prompt();var m=0; var p=+prompt();for(n=1;n<=p;n=n+1){var l=+prompt();var h=n;var m=m+l;if(m>=t) break;} var left=p-h;console.log(left);/*提示：总量-前几个人的累加<=0*/
+    var t=+prompt();var s=t;var count=0;var p=+prompt();for(n=1;n<=p;n=n+1){var l=+prompt();if(l>s) continue; var s=s-l;count=count+1;} var left=p-count;console.log(left);
   </script>
 
 <script id="ch0105/24" type="text/javascript">
@@ -631,6 +631,8 @@ d73=(n%Math.pow(7,3)-n%Math.pow(7,2))/Math.pow(7,2);
 d91=(n%Math.pow(9,1)-n%Math.pow(9,0))/Math.pow(9,0);
 d92=(n%Math.pow(9,2)-n%Math.pow(9,1))/Math.pow(9,1);
 d93=(n%Math.pow(9,3)-n%Math.pow(9,2))/Math.pow(9,2);if(d71==d93&&d72==d92&&d73==d91)break;}console.log(n);
+console.log(+(''+d73+d72+d71));
+console.log(Number(''+d93+d92+d91));
   </script>
 <script id="ch0105/26" type="text/javascript">
     var n=+prompt();var count=0;for(m=0;m<n;m=m+1){var x=+prompt();var a=x%10;var b=(x%100-x%10)/10;var c=(x%1000-x%100)/100;var d=Math.floor(x/1000);var ss=a-d-c-b;if(ss>0) var count=count+1;} console.log(count)
@@ -643,13 +645,11 @@ d93=(n%Math.pow(9,3)-n%Math.pow(9,2))/Math.pow(9,2);if(d71==d93&&d72==d92&&d73==
 <script id="ch0105/28" type="text/javascript">
    var n=+prompt();
  var q="";
- for(m=1;;m=m+1){
-var h=(n%Math.pow(10,m)-n%Math.pow(10,m-1))/Math.pow(10,m-1);
-if(h>=1){
-  var p=h;
-  var q=q+h+" ";}
-  else break;} 
-  console.log(q)
+ while(n>0){
+var di=n%10;
+var q=q+di+' ';
+n=(n-di)/10;
+} console.log(q)
   </script>
 
 <script id="ch0105/29" type="text/javascript">
@@ -672,7 +672,7 @@ else console.log("NO");
   </script>
 
 <script id="ch0105/31" type="text/javascript">
-    var l = +prompt()//灯的数量
+  var l = +prompt()//灯的数量
 var p = +prompt()//人的数量
 var turn
 var ss='';
@@ -685,11 +685,11 @@ for(var lightNum = 1; lightNum <= l; lightNum++) {
     }
   }
 
-  if (turn % 2 === 1) {
-    var ss=ss+lightNum+',';
+  if (turn % 2 === 1&&lightNum!=1) {
+    var ss=ss+','+lightNum;
 
   }
-} console.log(ss)
+}var last=1+ss; console.log(last)
   </script>
 <script id="ch0105/32" type="text/javascript">
     var n=+prompt();
