@@ -633,7 +633,7 @@ d92=(n%Math.pow(9,2)-n%Math.pow(9,1))/Math.pow(9,1);
 d93=(n%Math.pow(9,3)-n%Math.pow(9,2))/Math.pow(9,2);if(d71==d93&&d72==d92&&d73==d91)break;}/*console.log(n);
 console.log(+(''+d73+d72+d71));
 console.log(Number(''+d93+d92+d91));*/
-console.log('不提供')
+console.log('（不提供）')
   </script>
 <script id="ch0105/26" type="text/javascript">
     var n=+prompt();var count=0;for(m=0;m<n;m=m+1){var x=+prompt();var a=x%10;var b=(x%100-x%10)/10;var c=(x%1000-x%100)/100;var d=Math.floor(x/1000);var ss=a-d-c-b;if(ss>0) var count=count+1;} console.log(count)
@@ -644,14 +644,15 @@ console.log('不提供')
   </script>
 
 <script id="ch0105/28" type="text/javascript">
-   var n=+prompt();
- var q="";
+ var n=+prompt();
+ var s="";var count=0;
  while(n>0){
 var di=n%10;
 
 n=(n-di)/10;
-console.log(di)
-} 
+var count=count+1;if(count==1) var s=s+di;else
+var s=s+' '+di
+} console.log(s)
   </script>
 
 <script id="ch0105/29" type="text/javascript">

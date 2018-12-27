@@ -69,12 +69,37 @@ for(n=70;n<=100;n=n+1){dot(20,n,'black');}
 for(n=70;n<=100;n=n+1){dot(40,n,'black');}
 for(m=70;m<100;m=m+1){for(n=20;n<=40;n=n+1){dot(n,m,'black');}}
 /*画一个rgb色彩空间的某一面*/
-for(n=20;n<=60;n=n+1){dot(n,120,'black');}
-for(n=20;n<=60;n=n+1){dot(n,160,'black');}
-for(n=120;n<=160;n=n+1){dot(20,n,'black');}  
-for(n=120;n<=160;n=n+1){dot(60,n,'black');}
+/*第一种
+﻿
+for(n=20;n<=60;n=n+1){dot(n,120);}
+for(n=20;n<=60;n=n+1){dot(n,160);}
+for(n=120;n<=160;n=n+1){dot(20,n);}  
+for(n=120;n<=160;n=n+1){dot(60,n);}
+for(m=120;m<=160;m=m+1){for(n=20;n<=60;n=n+1){ dot(n,m,'rgb('+0+','+0+','+(255/40*(n-20))+')')} }使用数字，注意rgb内的值表示成字符形式rgb('+0+','+0+','+(255/40*(n-20))+')用+号拼接
+*/
+/*第二种*/for(n=20;n<=120;n=n+1){dot(n,120);}
+for(n=20;n<=120;n=n+1){dot(n,220);}
+for(n=120;n<=220;n=n+1){dot(20,n);}  
+for(n=120;n<=220;n=n+1){dot(120,n);}
+ for(m=120;m<=220;m=m+1){for(n=20;n<=120;n=n+1){
+dot(n,m,'rgb('+0+'%'+','+(m-120)+'%'+','+(n-20)+'%'+','+'1'+')')}}//可以使用百分数，但是百分号要当作字符拼接
 /*画圆*/
-for(n=0;n<=100;n=n+1){var s=Math.sqrt(Math.pow(100,2)-Math.pow(n,2));dot(n,s,'black')}
+
+
+  /*空心圆*/
+for(var theta=0;theta<2*Math.PI;theta+=0.01){
+  var x=Math.cos(theta)*50;
+  var y=Math.sin(theta)*50;
+  dot(x+150,y+200,'black')
+}
+
+for(n=0;n<=50;n=n+1){
+for(var theta=0;theta<2*Math.PI;theta+=0.01){
+  var x=Math.cos(theta)*n;
+  var y=Math.sin(theta)*n;
+  dot(x+250,y+100,'yellow')
+}
+}
 /*画一个大小合适的sin(x)的图像*/
   for(n=0;n<=400;n=n+1){var m=15*Math.sin(n/10)+200;dot(n,m)}
 
