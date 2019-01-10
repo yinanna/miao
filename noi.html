@@ -622,7 +622,16 @@ console.log(s.toFixed(7));
   </script>
 
 <script id="ch0105/24" type="text/javascript">
-  var s=0;var count=0;var hh=+prompt();for(m=1;m<=hh;m=m+1){var a=+prompt();var b=+prompt();if(90<=a&&a<=140&&60<=b&&b<=90) var count=count+1;else count=0;if(count>s) var s=count;} console.log(s)
+  var s=0;
+  var count=0;
+  var hh=+prompt();
+  for(m=1;m<=hh;m=m+1){
+    var a=+prompt();
+    var b=+prompt();
+    if(90<=a&&a<=140&&60<=b&&b<=90) 
+      var count=count+1;else count=0;
+    if(count>s) var s=count;
+  } console.log(s)
   </script>
 <script id="ch0105/25" type="text/javascript">
     for(n=81;n<=728;n=n+1){d71=(n%Math.pow(7,1)-n%Math.pow(7,0))/Math.pow(7,0);
@@ -656,7 +665,25 @@ var s=s+' '+di
   </script>
 
 <script id="ch0105/29" type="text/javascript">
-    
+   var p=+prompt();
+var t='';
+var pp=Math.abs(p);
+var s=pp%10;
+if(s==0){
+do{
+pp=(pp-s)/10;
+var s=pp%10;
+}while(s==0);
+ }
+while(pp>0){
+t=t+s;
+pp=(pp-s)/10;
+var s=pp%10;
+}
+if(p>0){
+console.log(Number(t))} 
+else{
+  console.log(Number('-'+t))}   
   </script>
 <script id="ch0105/30" type="text/javascript">
     var m=+prompt();
@@ -817,7 +844,20 @@ if(count==m-2) var t=t+1; if(t==n-1) break;}
 console.log(m);}
   </script>
 <script id="ch0105/45" type="text/javascript">
-    var n=+prompt();var t=0;var t1=0;var s=0;for(m=1;;m=m+1){var t1=t;t=t+m;if(t>=n) break;} for(h=1;h<=m-1;h=h+1){s=s+Math.pow(h,2)} var hh=s+(n-t1)*m; console.log(hh);
+    var n=+prompt();
+    var t=0;
+    var t1=0;
+    var s=0;
+    for(m=1;;m=m+1){
+      var t1=t;
+      t=t+m;
+      if(t>=n) 
+        break;
+    } 
+      for(h=1;h<=m-1;h=h+1){
+        s=s+Math.pow(h,2)
+      } var hh=s+(n-t1)*m;
+       console.log(hh);
   </script>
 <script id="ch0105/" type="text/javascript">
     
