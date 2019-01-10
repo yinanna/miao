@@ -9,9 +9,9 @@ var yinanna = function(){
       j++;
     }
 return result;
-  },
+  }
   
-  compact:function(ary) {
+compact:function(ary) {
     var result=[];
     for(n=0;n<ary.length;n=n+1){
       if(ary[n]){
