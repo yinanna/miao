@@ -11,7 +11,7 @@ var yinanna = function(){
 return result;
   }
   
-compact:function(ary) {
+compact:function compact(ary) {
     var result=[];
     for(n=0;n<ary.length;n=n+1){
       if(ary[n]){
