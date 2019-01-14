@@ -1,29 +1,36 @@
-var yinanna= (function() {
+
+
+
+var yinanna = function () {
+
   function chunk(ary, size = 1) {
-    var result=[];
-    var n=Math.floor(ary.length/size)+1;
-    var j=0;
-    for(i=0;i<ary.length;i=i+size){
-      var s=ary.slice(i,i+size)
-      result[j]=s;
-      j++;
+    var result = []
+    for (var i = 0; i < ary.length; i += size) {
+      result.push(ary.slice(i, i + size))
     }
-return result;
+    return result
   }
-  function compact(ary) {
-    var result=[];
-    for(n=0;n<ary.length;n=n+1){
-      if(ary[n]){
-        result.push(ary[n])
 
+  function compact(array) {
+    var index = -1,
+      length = array == null ? 0 : array.length,
+      resIndex = 0,
+      result = [];
+
+    while (++index < length) {
+      var value = array[index];
+      if (value) {
+        result[resIndex++] = value;
       }
-      return ary;
     }
-  return {
-    chunk: chunk,
-    compact: compact,
-  };
-})();
+    return result;
+  }
 
+
+return {
+  chunk: chunk,
+  compact: compact,
+}
+}()
 
 
