@@ -1,5 +1,5 @@
 var yinanna = function(){
-  chunk:function chunk(ary, size = 1) {
+  function chunk(ary, size = 1) {
     var result=[];
     var n=Math.floor(ary.length/size)+1;
     var j=0;
@@ -11,7 +11,7 @@ var yinanna = function(){
 return result;
   }
   
-compact:function compact(ary) {
+function compact(ary) {
     var result=[];
     for(n=0;n<ary.length;n=n+1){
       if(ary[n]){
@@ -19,7 +19,7 @@ compact:function compact(ary) {
 
       }
       return ary;
-    },
+    }
     /*
     var result = []
     for(var item of ary) {
@@ -31,5 +31,9 @@ compact:function compact(ary) {
   }
   */
   
-
+return{
+  chunk:chunk,
+  compact:compact,
 }
+
+}()
