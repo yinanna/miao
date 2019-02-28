@@ -341,10 +341,6 @@ return values.includes(value,fromIndex)
 
 }
 
-function reduce(){
-  
-}
-  
 return {
   chunk: chunk,
   compact: compact,
